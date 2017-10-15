@@ -1,17 +1,11 @@
 function formSubmit (e) {
 	e.preventDefault();
 	var number = Number(e.target.num.value);
-	console.log('type:', typeof number);
-	console.log(number);
 	alert(factorial(number));
 }
 
 function factorial(num) {
-   var res = 1;
-   for(var i = 1; i < num; i++){
-   	res *= i;
-   }
-  return res;
+   return num > 1 ? num = factorial(num - 1) : 1;
 }
 
 document.getElementById('my-form')
